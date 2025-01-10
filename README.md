@@ -35,19 +35,19 @@ Une fois le dépôt cloné, accédez au répertoire du projet :
 cd tax-app
 
 
-###Étape 3 : Installer les dépendances
+### Étape 3 : Installer les dépendances
 
 Si vous utilisez Maven :
 ```bash
 mvn install
-
+```
 Si vous utilisez Gradle :
 ```bash
 gradle build
-
+```
 Cela installera toutes les dépendances nécessaires pour faire fonctionner l'application.
 
-###Étape 4 : Exécuter l'application
+### Étape 4 : Exécuter l'application
 
 Avec Maven :
 ```bash
