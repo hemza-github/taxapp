@@ -27,3 +27,81 @@ Pour récupérer le code source de l'application, clonez ce dépôt Git en utili
 
 ```bash
 git clone https://github.com/hemza-github/taxapp.git
+
+
+### Étape 2 : Accéder au répertoire du projet
+
+Une fois le dépôt cloné, accédez au répertoire du projet :
+cd tax-app
+
+
+###Étape 3 : Installer les dépendances
+
+Si vous utilisez Maven :
+mvn install
+
+Si vous utilisez Gradle :
+gradle build
+
+Cela installera toutes les dépendances nécessaires pour faire fonctionner l'application.
+
+###Étape 4 : Exécuter l'application
+
+Avec Maven :
+mvn spring-boot:run
+
+Avec Gradle :
+gradle bootRun
+
+Une fois l'application lancée, elle sera disponible à l'adresse suivante :
+
+http://localhost:8080/h2-console
+
+Vous pouvez accéder à l'API REST via cette URL et interagir avec les produits et les taxes.
+
+##API REST
+
+###Endpoints
+
+####POST /products : Créer un nouveau produit.
+
+Corps de la requête (JSON) :
+{
+  "name": "Product name",
+  "price": 100.00,
+  "country": "FRANCE"
+}
+
+Réponse (Status 201) :
+{
+  "id": 1,
+  "name": "Product name",
+  "price": 100.00,
+  "country": "FRANCE"
+}
+
+####GET /products/{id} : Récupérer un produit par son ID.
+
+Réponse (Status 200) :
+{
+  "id": 1,
+  "name": "Product name",
+  "price": 100.00,
+  "country": "FRANCE"
+}
+
+####GET /products/{id}/tax : Calculer la taxe appliquée à un produit basé sur son pays.
+
+Réponse (Status 200) :
+{
+  19.00
+}
+
+
+####Exemple de calcul de la taxe
+
+USA : 10% de taxe
+Canada : 5% de taxe
+France : 19% de taxe
+
+
