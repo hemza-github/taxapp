@@ -112,8 +112,8 @@ Réponse (Status 200) :
 
 USA : 10% de taxe
 
-Canada : 5% de taxe
+Canada : 95% de taxe
 
-France : 19% de taxe
+France : 20% de taxe
 
 
