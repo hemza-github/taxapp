@@ -160,9 +160,13 @@ tax-app/
 └── build.gradle     (si vous utilisez Gradle)
 ```
 controller : Contient les classes qui gèrent les endpoints de l'API REST.
+
 model : Contient les classes représentant les entités, comme Product et Country.
+
 repository : Contient les interfaces pour l'accès aux données (JPA Repository).
+
 service : Contient les services qui implémentent la logique métier, comme le calcul des taxes.
+
 strategy : Contient les classes des différentes stratégies de taxation.
 
 
