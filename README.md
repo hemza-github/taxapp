@@ -121,14 +121,12 @@ France : 20% de taxe
 L'application comprend des tests unitaires et d'intégration pour valider les fonctionnalités principales.
 
 Exécuter les tests avec Maven
-Pour exécuter les tests avec Maven, utilisez la commande suivante :
 
 ```bash
 mvn test
 ```
 
 Exécuter les tests avec Gradle
-Si vous utilisez Gradle, exécutez la commande suivante :
 
 ```bash
 gradle test
