@@ -111,7 +111,9 @@ Réponse (Status 200) :
 #### Exemple de calcul de la taxe
 
 USA : 10% de taxe
+
 Canada : 5% de taxe
+
 France : 19% de taxe
 
 
