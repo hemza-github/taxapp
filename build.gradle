@@ -1,0 +1,29 @@
+plugins {
+    id 'org.springframework.boot' version '3.4.1' // La même version de Spring Boot que dans ton pom.xml
+    id 'java'  // Plugin Java pour compiler ton code
+}
+
+group = 'com.example'  // Le même groupe que dans ton pom.xml
+version = '0.0.1-SNAPSHOT'  // La version du projet
+sourceCompatibility = '17'  // Spécifie la version de Java que tu utilises (17 ici)
+
+repositories {
+    mavenCentral()  // Utilisation de Maven Central pour télécharger les dépendances
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'  // Dépendance pour Spring Boot Web
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'  // Dépendance pour Spring Boot Data JPA
+    implementation 'com.h2database:h2'  // Base de données H2 pour développement
+    compileOnly 'org.projectlombok:lombok'  // Lombok pour générer automatiquement les getters, setters, etc.
+    annotationProcessor 'org.projectlombok:lombok'  // Lombok pour la génération de code
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'  // Dépendance pour les tests
+}
+
+test {
+    useJUnitPlatform()  // Utilisation de JUnit pour les tests
+}
+
+bootRun {
+    sourceResources sourceSets.main
+}
