@@ -116,4 +116,53 @@ Canada : 95% de taxe
 
 France : 20% de taxe
 
+## Exécution des Tests
+
+L'application comprend des tests unitaires et d'intégration pour valider les fonctionnalités principales.
+
+Exécuter les tests avec Maven
+Pour exécuter les tests avec Maven, utilisez la commande suivante :
+
+```bash
+mvn test
+```
+
+Exécuter les tests avec Gradle
+Si vous utilisez Gradle, exécutez la commande suivante :
+
+```bash
+gradle test
+```
+Les tests couvriront les fonctionnalités suivantes :
+
+Test des stratégies de taxation.
+Test de l'API REST pour la création de produits et le calcul des taxes.
+
+## Structure du projet
+
+Voici la structure de fichiers du projet :
+
+```bash
+tax-app/
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/example/taxapp/
+│   │   │       ├── controller/
+│   │   │       ├── model/
+│   │   │       ├── repository/
+│   │   │       ├── service/
+│   │   │       └── strategy/
+│   │   └── resources/
+│   └── test/
+│       └── java/com/example/taxapp/
+├── pom.xml          (si vous utilisez Maven)
+└── build.gradle     (si vous utilisez Gradle)
+```
+controller : Contient les classes qui gèrent les endpoints de l'API REST.
+model : Contient les classes représentant les entités, comme Product et Country.
+repository : Contient les interfaces pour l'accès aux données (JPA Repository).
+service : Contient les services qui implémentent la logique métier, comme le calcul des taxes.
+strategy : Contient les classes des différentes stratégies de taxation.
+
 
